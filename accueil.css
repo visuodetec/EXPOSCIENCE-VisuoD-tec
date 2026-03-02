@@ -26,7 +26,7 @@ body{
     background-color: black;
     overflow-x: hidden;
     width: 100%;
-    min-width: 480px;
+    min-width: 414px;
 }
 
 a{
@@ -79,16 +79,14 @@ p{
     font-family: "Bebas Neue",sans-serif;
     font-weight: 0;
     font-size: clamp(2.8rem, 0.606rem + 4.56vw, 4.8rem);
-    position: relative;
     top: clamp(0.375rem, 0.193rem + 0.61vw, 0.75rem);
 }
 
 .hr-subtitle2{
-    position: relative;
+    width: 100%;
     border: none;
     background-color: var(--color-main);
     border-radius: 10px;
-    width: 100%;
     height: clamp(0.2rem, 0.077rem + 0.26vw, 0.313rem);
     bottom: clamp(0.15rem, 0.126rem + 0.08vw, 0.2rem);
     transition: box-shadow 0.5s ease;
@@ -458,20 +456,64 @@ p{
     left: 0;
 }
 
-.Image-Cataracte{
-    animation: cataracte-animation 18s ease-in-out 0s infinite;
+.Image-OeilNormal-1{
+    animation: imageoeil1-animation 18s ease-in-out 0s infinite;
 }
 
-.Image-Conjonctivite{
-    animation: conjonctivite-animation 18s ease-in-out 0s infinite;
+.Image-OeilNormal-2{
+    animation: imageoeil2-animation 18s ease-in-out 0s infinite;
 }
 
-.Image-OeilNormal{
-    animation: oeil-animation 18s ease-in-out 0s infinite;
+.Image-OeilNormal-3{
+    animation: imageoeil3-animation 18s ease-in-out 0s infinite;
 }
+
+.oeil-pupille{
+    position: absolute;
+    z-index: 2;
+    top: 28%;
+    left: 36%;
+    width: 40%;
+    height: 40%;
+    animation: pupille-animation 18s ease-in-out 0s infinite;
+}
+
+.Paupières{
+    display: flex;
+    justify-content: center;
+}
+
+.paupière-une{
+    animation: paupière-haute-animation 18s ease-in-out 0s infinite;
+    position: absolute;
+    z-index: 1;
+    width: 60%; 
+    height: 24.5%;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    background-color: #f6c5af;
+    margin-left: 5%;
+    top: 16%;
+}
+
+.paupière-deux{
+    animation: paupière-basse-animation 18s ease-in-out 0s infinite;
+    position: absolute;
+    z-index: 1;
+    width: 60%; 
+    height: 24.5%;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+    background-color: #f6c5af;
+    margin-left: 5%;
+    bottom: 16%;
+}
+
+/* Border-radius */
 
 .hr-scan{
     position: absolute;
+    z-index: 2;
     top: 0px;
     left: 0px;
     height: 5px;
@@ -516,12 +558,12 @@ p{
     }
 }
 
-@keyframes oeil-animation{
+@keyframes imageoeil1-animation{
     0%{
         opacity: 0;
     }
     16.66%{
-        opacity: 1;
+        opacity: 1;        
     }
     33.33%{
         opacity: 0;
@@ -531,7 +573,69 @@ p{
     }
 }
 
-@keyframes cataracte-animation{
+@keyframes paupière-haute-animation{
+    0%{
+        opacity: 0;
+        padding-bottom: 0px;   
+    }
+    33.33%{
+        opacity: 0;
+        padding-bottom: 35%;      
+    }
+    41.6625%{
+        opacity: 1; 
+        padding-bottom: 0px;    
+    }
+    49.995%{
+        opacity: 1;
+        padding-bottom: 35%;   
+    }
+    58.3275%{
+        opacity: 1;
+        padding-bottom: 0px;  
+    }
+    66.66%{
+        opacity: 0;
+        padding-bottom: 35%;
+    }
+    100%{
+        opacity: 0;
+        padding-bottom: 0px;   
+    }
+}
+
+@keyframes paupière-basse-animation{
+    0%{
+        opacity: 0;
+        padding-top: 0px;   
+    }
+    33.33%{
+        opacity: 0;
+        padding-top: 35%;      
+    }
+    41.6625%{
+        opacity: 1; 
+        padding-top: 0px;    
+    }
+    49.995%{
+        opacity: 1;
+        padding-top: 35%;   
+    }
+    58.3275%{
+        opacity: 1;
+        padding-top: 0px;  
+    }
+    66.66%{
+        opacity: 0;
+        padding-top: 35%;
+    }
+    100%{
+        opacity: 0;
+        padding-top: 0px;   
+    }
+}
+
+@keyframes imageoeil2-animation{
     0%{
         opacity: 0;
     }
@@ -549,7 +653,7 @@ p{
     }
 }
 
-@keyframes conjonctivite-animation{
+@keyframes imageoeil3-animation{
     0%{
         opacity: 0;
     }
@@ -558,6 +662,41 @@ p{
     }
     83.325%{
         opacity: 1;
+    }
+    99.99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes pupille-animation{
+    0%{
+        opacity: 0;
+    }
+    66.66%{
+        opacity: 0;
+        transform: rotate(0deg);
+        top: 28%;
+        left: 36%;
+    }
+    79.9925%{
+        opacity: 1;
+        transform: rotate(-64deg);
+        top: 28%;
+        left: 20%;
+    }
+    83.325%{
+        opacity: 1;
+        transform: rotate(-68deg);
+        top: 38%;
+        left: 32%;
+    }
+    91.6575%{
+        opacity: 1;
+        top: 28%;
+        left: 36%;
     }
     99.99%{
         opacity: 0;
@@ -780,7 +919,7 @@ p{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/*END*/
+
 /*PROCESSUS*/
 
 #processus{
@@ -836,6 +975,7 @@ p{
     border-radius: 16px;
     background: linear-gradient(135deg,var(--color-main),var(--color-5));
     transition: margin-top 0.8s ease-in-out;
+    box-shadow: 0 0 10px 1px var(--color-1);
 }
 
 .processus-div:hover{
@@ -883,18 +1023,19 @@ p{
     height: fit-content;
     text-align: center;
     margin-top: 16px;
-    margin-left: 8px;
-    margin-right: 8px; 
+    margin-left: 16px;
+    margin-right: 16px; 
 }
 
 #scrollbar-animated{
     height: auto;
     width: auto;
     padding-top: calc(24px + clamp(0.375rem, 0.193rem + 0.61vw, 0.75rem));
+    overflow-x: hidden;
 }
 
 .scrollbar{
-    overflow-x: visible;
+    overflow-x: hidden;
     position: relative;
     width: fit-content;
     height: auto;
@@ -932,7 +1073,7 @@ p{
 #scrollbar-animated:has(.clickable-word:hover) .scrollbar{
     background-color: var(--linear-gradient-2);
 }
-/*END*/
+
 /*CONTENU*/
 
 #contenu{
@@ -1124,11 +1265,9 @@ p{
     width: 60px;
 }
 
-/*END*/
-/*IMPACTS*/
+/*IMPACTS -----------*/
 
-
-.text-impact{
+/* .text-impact{
     margin-left: clamp(2rem, -3.818rem + 19.39vw, 14rem); 
     margin-right: clamp(2rem, -3.818rem + 19.39vw, 14rem); 
     padding-bottom: calc(24px + clamp(0.375rem, 0.193rem + 0.61vw, 0.75rem));
@@ -1167,9 +1306,94 @@ p{
     background: linear-gradient(135deg,#0084a0BF,#003257BF);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+} --------------*/
+
+/*FOOTER*/
+
+#footer{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 3px solid whitesmoke;
+    box-shadow: 0 0 20px 2px whitesmoke;
+    justify-content: space-evenly;
+    height: clamp(12.5rem, 9.47rem + 10.1vw, 18.75rem); 
+    width: 100%;
+    background: linear-gradient(var(--color-5),var(--dark-1));
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: clamp(0.75rem, -4.098rem + 16.16vw, 10.75rem); /* Clamp 172, 12 px*/
+    padding-right: clamp(0.75rem, -4.098rem + 16.16vw, 10.75rem);
 }
 
-/*END*/
+.footer-avertissement-part{
+    height: 100%;
+    width: 44%;
+    border-radius: 10px;
+    background-color: black;
+    border: 3px solid whitesmoke;
+}
+
+.footer-info-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 32%;
+    border-radius: 10px;
+    background-color: black;
+    border: 3px solid whitesmoke;
+}
+
+.footer-title-1{
+    margin-left: 2%;
+    margin-top: 0.88%;
+}
+
+.footer-text{
+    font-family: "Poppins", sans-serif;
+    font-weight: 0;
+    font-size: clamp(0.453rem, 0.248rem + 0.68vw, 0.875rem); /* 14px, 7.24px*/ 
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.footer-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 12%;
+}
+
+.footer-ref-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(4rem, 2.667rem + 4.44vw, 6.75rem); /* 108, 64*/
+    width: clamp(4rem, 2.667rem + 4.44vw, 6.75rem);
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--color-1), var(--color-5));
+    border: 3px solid whitesmoke;
+}
+
+.footer-logo-button{
+    height: clamp(4rem, 2.667rem + 4.44vw, 6.75rem);
+    width: clamp(4rem, 2.667rem + 4.44vw, 6.75rem);
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--color-1), var(--color-5));
+    border: 3px solid whitesmoke;
+}
+
+.icon-footer-logo{
+    width: 100%;
+    height: 100%;
+}
 
 /*MEDIA*/
 
@@ -1202,8 +1426,8 @@ p{
 @media(max-width: 768px){
     /*FONTS*/
     .text-subtitle-2{
-    font-family: "Bebas Neue",sans-serif;
-    font-size: clamp(2.4rem, 1.733rem + 2.22vw, 2.8rem);
+        font-family: "Bebas Neue",sans-serif;
+        font-size: clamp(2.4rem, 1.733rem + 2.22vw, 2.8rem);
     }
     .a-button-text,.text-subtitle{
         font-size: clamp(1rem, 0.667rem + 1.11vw, 1.2rem);
@@ -1214,7 +1438,6 @@ p{
     .text{
         font-size: clamp(0.64rem, 0.273rem + 1.22vw, 0.86rem);
     }
-    /*END*/
     /*HEADER*/
     #navbar{
     display: grid;
@@ -1261,7 +1484,6 @@ p{
     .icon{
         width: clamp(1rem, 0.5rem + 1.67vw, 1.3rem);
     }
-    /*END*/
     /*INTRODUCTION*/
     #introduction{
     height: calc(100vh - 96px);
@@ -1342,7 +1564,7 @@ p{
     padding-left: 16px;
     padding-right: 16px;
     }
-    /* - INFORMATION IMAGE*/
+    /* INFORMATION IMAGE*/
     #image-space{
     display: flex;
     align-items: center;
@@ -1382,10 +1604,96 @@ p{
     left: calc(50% - 1.4rem);
     width: 3.2rem; 
     }
-    /*END*/
+    /*DESCRIPTION*/
+    #description{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    padding-bottom: calc(40px + clamp(0.375rem, 0.193rem + 0.61vw, 0.75rem));
+    background: linear-gradient(195deg,var(--linear-gradient-2),var(--linear-gradient-1),black 64%);
+    }
+    #text-section-1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        grid-area: 1 / 1 / 1 / 1;
+        padding: 0px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #description-paragraph{
+        margin-top: 6.4px;
+    }
+    .hr-subtitle2{
+        width: 100%;
+        border: none;
+        background-color: var(--color-main);
+        border-radius: 10px;
+        height: clamp(0.2rem, 0.077rem + 0.26vw, 0.313rem);
+        bottom: clamp(0.15rem, 0.126rem + 0.08vw, 0.2rem);
+        transition: box-shadow 0.5s ease;
+    }
+    #text-section-2{
+        grid-area: 2 / 1 / 3 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: clamp(2rem, 1.03rem + 3.23vw, 4rem);
+        padding-top: 40px;
+    }
+    .description-picture-space{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .description-div-space{
+        position: absolute;
+        padding-bottom: 8%; 
+        padding-right: 8%;
+        width: fit-content;
+    }
+    .div-space-1{
+        opacity: 1;
+    }
+    .div-space-2{
+        opacity: 1;
+    }
+    .description-image{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: black;
+        border: 2px solid var(--color-main);
+        border-radius: 5%;
+        width: 96%;
+        height: 96%;
+    }
+    .description-picture{
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: clamp(16rem, 2.836rem + 27.39vw, 28rem); 
+        border-radius: 5%;
+        box-shadow: 0 0 20px 2px var(--color-1);
+    }
 }
 
+/* Viewport of certain iphones: 414px*/
+
 @media(max-width: 480px){
+    #black-wallpaper{
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;   
+    }
     .icon.consulter{
         border: 10px solid yellow;
     }
