@@ -1706,12 +1706,11 @@ p{
         width: 100%;   
     }
     #introduction{
-        height: calc(100vh - 192px); /*MESSES UP*/
+        height: calc(100vh - 96px); /*MESSES UP 96 192*/
     }
     body{
         background-color: black;
         overflow-x: hidden;
-        height: calc(100vh + 96px);;
         width: 100%;
         min-width: 414px; 
     }
