@@ -342,7 +342,7 @@ p{
     width: 100%;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1;
+    grid-template-rows: 1fr 0.025fr;
     border-bottom: 5px solid white;
     border: 3px solid purple;
 }
@@ -716,12 +716,20 @@ p{
     align-items: start;
     height: 10%;
     width: 100%;
+    border: 2px solid blue;
+}
+
+#Big-Icon-Seperator{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    grid-area: 2 / 1 / 3 / 3;
+    border: 2px solid cyan;
 }
 
 .Big-Icon.Oeil{ /*Important*/
     position: absolute;
-    bottom: -24px; /* -24px */
-    left: calc(50% - 1rem);
+    bottom: -32px; /* -24px */ /*left: calc(50% - 1rem);*/
     width: 3.8rem; 
 }
 
@@ -1502,7 +1510,7 @@ p{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 1fr;
+    grid-template-rows: 1.5fr 1fr 0.025fr;
     border-bottom: 5px solid white;
     }
     #black-wallpaper{
@@ -1611,11 +1619,17 @@ p{
     height: 20%;
     width: 100%;
     }
+    #Big-Icon-Seperator{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        grid-area: 3 / 1 / 4 / 2;
+        border: 2px solid cyan;
+    }
     .Big-Icon.Oeil{ /* IMPORTANT*/
-    position: absolute;
-    bottom: -20px; /* -20px*/
-    left: calc(50% - 1.4rem);
-    width: 3.2rem; 
+        position: absolute;
+        bottom: -28px; /* -20px left: calc(50% - 1.4rem);*/
+        width: 3.2rem; 
     }
     /*DESCRIPTION*/
     #description{
