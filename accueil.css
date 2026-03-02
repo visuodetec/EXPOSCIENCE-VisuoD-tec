@@ -26,7 +26,7 @@ body{
     background-color: black;
     overflow-x: hidden;
     width: 100%;
-    min-width: 414px;
+    min-width: 414px; 
 }
 
 a{
@@ -324,18 +324,17 @@ p{
     cursor: pointer;
 }
 
-/*END*/
 /*INTRODUCTION*/
 .inv-space{
     position: relative;
     z-index: -2;
     height: 96px;
     width: 100%;
-    background-color: #003257;
+    background-color: #003257; /* IMPORTANT */
 }
 
 #introduction{
-    height: calc(100vh - 96px);
+    height: calc(100vh - 96px); /*MESSES UP*/
     width: 100%;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -346,7 +345,7 @@ p{
 #black-wallpaper{
     position: absolute;
     z-index: -1;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 
@@ -1524,7 +1523,7 @@ p{
     }
     .text-title{
     display: inline-block;
-    font-size: clamp(7.2rem, 5.867rem + 4.44vw, 8rem);
+    font-size: clamp(7rem, 5.333rem + 5.56vw, 8rem); /* 8rem --> 7rem */ 
     width: auto;
     }
     .hr-title{
@@ -1654,8 +1653,9 @@ p{
     }
     .description-div-space{
         position: absolute;
-        padding-bottom: 8%; 
-        padding-right: 8%;
+        padding-bottom: 6.4%; 
+        padding-right: 0;
+        padding-left: 2%;
         width: fit-content;
     }
     .div-space-1{
@@ -1678,6 +1678,8 @@ p{
     .description-picture{
         display: block;
         position: relative;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 1;
         width: clamp(16rem, 2.836rem + 27.39vw, 28rem); 
         border-radius: 5%;
@@ -1694,7 +1696,7 @@ p{
         height: 100%;
         width: 100%;   
     }
-    .icon.consulter{
-        border: 10px solid yellow;
+    #introduction{
+        height: calc(100vh - 192px); /*MESSES UP*/
     }
 }
